@@ -21,9 +21,10 @@ const App = () => {
         <p className='text-white flex justify-center text-lg font-mono'>
           Convert and copy the speech you speak in the form of text.</p>
 
-
-          <div className='text-white'>
+          <div className='w-4/12 mx-auto'>
+          <div className='text-white flex  justify-center  bg-blue-800 '>
             {transcript}
+          </div>
           </div>
 
           <div className='text-white flex justify-center items-center m-6 p-4 '>
