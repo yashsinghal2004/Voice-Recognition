@@ -7,11 +7,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { CopyText } from './Utils/copySlice';
 const App = () => {
   const dispatch=useDispatch();
-  const copiedtext=useSelector((store)=>store.copy);
+  const copiedtext=useSelector((store)=>store.copy.textToCopy);
   const [isCopied, setCopied] = useClipboard(copiedtext);
   const startListening=()=>SpeechRecognition.startListening({ continuous: true })
   const stopListening=()=>SpeechRecognition.stopListening()
-
   
 
   const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
@@ -27,11 +26,11 @@ const App = () => {
         Speech to Text Converter</h1>
         <br />
         <p className='text-gray-500 flex justify-center text-lg font-mono '>
-          Convert and copy the speech you speak in the form of text.</p>
+          Convert and copy the speech you speak in the form of text.<br/>*Note-Click on the input box before copying to clipboard</p>
 
 
-          <div className='text-black flex  justify-center w-5/12  mx-auto mt-14 drop-shadow-xl' onChange={()=>dispatch(CopyText({textToCopy:transcript}))}>
-            <textarea  placeholder='  Start Speaking...' cols="70" rows="10" value={transcript} className='bg-gray-200 text-black rounded-md p-2' onClick={()=>dispatch(CopyText({textToCopy:transcript}))}></textarea>
+          <div className='text-black flex  justify-center w-9/12  mx-auto mt-14 drop-shadow-xl' >
+            <textarea  placeholder='  Start Speaking...' cols="70" rows="10" value={transcript} className='bg-gray-200 text-black rounded-md p-2' onClick={()=>dispatch(CopyText(transcript))}></textarea>
           </div>
 
 

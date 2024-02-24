@@ -7,7 +7,7 @@ const copySlice=createSlice({
     },
     reducers:{
         CopyText:(state,action)=>{
-            textToCopy.state= action.payload;
+            state.textToCopy= action.payload;
         }
     }
 })
