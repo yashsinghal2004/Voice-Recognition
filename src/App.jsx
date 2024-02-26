@@ -25,11 +25,11 @@ const App = () => {
       <h1 className='text-black font-bold  text-3xl sm:text-4xl flex justify-center pt-14 sm:pt-10'>
         Speech to Text Converter</h1>
         <br />
-        <p className='text-gray-500 flex justify-center  sm:p-0 text-lg px-4 m font-mono '>
+        <p className='text-gray-500 flex justify-center  sm:p-0 text-lg px-2 m font-serif '>
           Convert and copy the speech you speak in the form of text<br/>*Note-Click on the input box before copying to clipboard</p>
 
 
-          <div className=' flex  justify-center w-11/12 sm:w-9/12  mx-auto my- mt-14 drop-shadow-lg' >
+          <div className=' flex  justify-center w-11/12 sm:w-9/12  mx-auto mt-14 drop-shadow-lg' >
             <textarea  placeholder='  Start Speaking...' cols="70" rows="10" value={transcript} className='bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-md p-2' onClick={()=>dispatch(CopyText(transcript))}></textarea>
           </div>
 
