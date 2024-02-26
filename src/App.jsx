@@ -25,7 +25,7 @@ const App = () => {
       <h1 className='text-black font-bold  text-3xl sm:text-4xl flex justify-center pt-14 sm:pt-10'>
         Speech to Text Converter</h1>
         <br />
-        <p className='text-gray-500 flex justify-center items-center px-4 sm:p-0 text-lg font-mono '>
+        <p className='text-gray-500 flex justify-center  sm:p-0 text-lg px-4 m font-mono '>
           Convert and copy the speech you speak in the form of text<br/>*Note-Click on the input box before copying to clipboard</p>
 
 
